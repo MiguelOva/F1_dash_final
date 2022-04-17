@@ -133,57 +133,52 @@ def seperator_switch(tab):
 # ------------------------------------------------------LAYOUT------------------------------------------------------
 
 cons_hof_layout = html.Div([
+    html.H1('Hall of Fame - Cosntructors',
+            style={'color': '#503D36', 'margin-top': '15px', 'font-size': 15}),
 
     html.Div([
-        dbc.Row(children=[
-            dbc.Card([
-                dbc.CardHeader("Optional Filters"),
-                dbc.CardBody(children=[
-                    html.Label('Please select number'),
-                    drop_num,
-                    html.Br(),
+        html.Div([
+            drop_num,
                 ]),
+            html.Br(),
             ]),
-            html.Div([
-                dbc.Row(children=[
-                    dbc.Col(dbc.Card([
-                        dbc.CardHeader("Top Constructors Per Total Points"),
-                        dbc.CardBody(id='cons_hof_p', children=[
-                            dt.DataTable(
-                                columns=[{"name": i, "id": i} for i in hall_of_fame.columns],
-                                data=hall_of_fame.to_dict("records"),
-                                page_current=0,
-                                style_header={"backgroundColor": "white", "fontWeight": "bold", },
-                                style_cell={"textAlign": "center", "font-size": "12px", },
-                                style_cell_conditional=[{"if": {"column_id": "Finished"}, "textAlign": "center", }],
+
+    dbc.Row(children=[
+        dbc.Col(
+            dbc.Card([
+                dbc.CardHeader("Top Constructors Per Total Points"),
+                dbc.CardBody(id='cons_hof_p', children=[
+                    dt.DataTable(
+                        columns=[{"name": i, "id": i} for i in hall_of_fame.columns],
+                        data=hall_of_fame.to_dict("records"),
+                        page_current=0,
+                        style_header={"backgroundColor": "white", "fontWeight": "bold", },
+                        style_cell={"textAlign": "center", "font-size": "12px", },
+                        style_cell_conditional=[{"if": {"column_id": "Finished"}, "textAlign": "center", }],
                             ),
-                        ]),
-                    ]), ),  # width=9),
+                            ]),
+                    ]),
+                    ),
+        dbc.Col(
+            dbc.Card([
+                dbc.CardHeader("Top Constructors Per Total Wins"),
+                dbc.CardBody(id='cons_hof_w', children=[
+                    dt.DataTable(
+                        columns=[{"name": i, "id": i} for i in hall_of_fame.columns],
+                        data=hall_of_fame.to_dict("records"),
+                        page_current=0,
+                        style_header={"backgroundColor": "white", "fontWeight": "bold", },
+                        style_cell={"textAlign": "center", "font-size": "12px", },
+                        style_cell_conditional=[{"if": {"column_id": "Finished"}, "textAlign": "center", }],
+                                ),
+                            ]),
+                    ]),
+                    ),
                 ]),
-            ], style={"margin-left": "160px"}),
-            html.Br(),
-            html.Div([
-                dbc.Row(children=[
-                    dbc.Col(dbc.Card([
-                        dbc.CardHeader("Top Constructors Per Total Wins"),
-                        dbc.CardBody(id='cons_hof_w', children=[
-                            dt.DataTable(
-                                columns=[{"name": i, "id": i} for i in hall_of_fame.columns],
-                                data=hall_of_fame.to_dict("records"),
-                                page_current=0,
-                                style_header={"backgroundColor": "white", "fontWeight": "bold", },
-                                style_cell={"textAlign": "center", "font-size": "12px", },
-                                style_cell_conditional=[{"if": {"column_id": "Finished"}, "textAlign": "center", }],
-                            ),
-                        ]),
-                    ]), ),  # width=9),
-                ]),
-            ], style={"margin-left": "160px"}),
-            html.Br(),
-            html.Br(),
-        ]),
-    ]),
-])
+html.Br(),
+html.Br(),
+            ])
+
 
 # -----------------------------------------------------CALLBACKS-------------------------------------------------------
 # ----------------------------------------------------CONSTRUCTORS------------------------------------------------------
@@ -214,59 +209,52 @@ def constructor_hall_of_fame(number):
 # ------------------------------------------------------LAYOUT------------------------------------------------------
 # ------------------------------------------------DRIVERS HALL OF FAME--------------------------------------------------
 # ------------------------------------------------------LAYOUT------------------------------------------------------
-
 drivers_hof_layout = html.Div([
+    html.H1('Hall of Fame - Drivers',
+            style={'color': '#503D36', 'margin-top': '15px', 'font-size': 15}),
 
     html.Div([
-        dbc.Row(children=[
-            dbc.Card([
-                dbc.CardHeader("Optional Filters"),
-                dbc.CardBody(children=[
-                    html.Label('Please select number'),
-                    drop_num,
-                    html.Br(),
+        html.Div([
+            drop_num,
                 ]),
+            html.Br(),
             ]),
-            html.Div([
-                dbc.Row(children=[
-                    dbc.Col(dbc.Card([
-                        dbc.CardHeader("Top Drivers Per Total Points"),
-                        dbc.CardBody(id='drivers_hof_p', children=[
-                            dt.DataTable(
-                                columns=[{"name": i, "id": i} for i in hall_of_fame.columns],
-                                data=hall_of_fame.to_dict("records"),
-                                page_current=0,
-                                style_header={"backgroundColor": "white", "fontWeight": "bold", },
-                                style_cell={"textAlign": "center", "font-size": "12px", },
-                                style_cell_conditional=[{"if": {"column_id": "Finished"}, "textAlign": "center", }],
+
+    dbc.Row(children=[
+        dbc.Col(
+            dbc.Card([
+                dbc.CardHeader("Top Drivers Per Total Points"),
+                dbc.CardBody(id='drivers_hof_p', children=[
+                    dt.DataTable(
+                        columns=[{"name": i, "id": i} for i in hall_of_fame.columns],
+                        data=hall_of_fame.to_dict("records"),
+                        page_current=0,
+                        style_header={"backgroundColor": "white", "fontWeight": "bold", },
+                        style_cell={"textAlign": "center", "font-size": "12px", },
+                        style_cell_conditional=[{"if": {"column_id": "Finished"}, "textAlign": "center", }],
                             ),
-                        ]),
-                    ]), ),  # width=9),
+                            ]),
+                    ]),
+                    ),
+        dbc.Col(
+            dbc.Card([
+                dbc.CardHeader("Top Drivers Per Total Wins"),
+                dbc.CardBody(id='drivers_hof_w', children=[
+                    dt.DataTable(
+                        columns=[{"name": i, "id": i} for i in hall_of_fame.columns],
+                        data=hall_of_fame.to_dict("records"),
+                        page_current=0,
+                        style_header={"backgroundColor": "white", "fontWeight": "bold", },
+                        style_cell={"textAlign": "center", "font-size": "12px", },
+                        style_cell_conditional=[{"if": {"column_id": "Finished"}, "textAlign": "center", }],
+                                ),
+                            ]),
+                    ]),
+                    ),
                 ]),
-            ], style={"margin-left": "160px"}),
-            html.Br(),
-            html.Div([
-                dbc.Row(children=[
-                    dbc.Col(dbc.Card([
-                        dbc.CardHeader("Top Drivers Per Total Wins"),
-                        dbc.CardBody(id='drivers_hof_w', children=[
-                            dt.DataTable(
-                                columns=[{"name": i, "id": i} for i in hall_of_fame.columns],
-                                data=hall_of_fame.to_dict("records"),
-                                page_current=0,
-                                style_header={"backgroundColor": "white", "fontWeight": "bold", },
-                                style_cell={"textAlign": "center", "font-size": "12px", },
-                                style_cell_conditional=[{"if": {"column_id": "Finished"}, "textAlign": "center", }],
-                            ),
-                        ]),
-                    ]), ),  # width=9),
-                ]),
-            ], style={"margin-left": "160px"}),
-            html.Br(),
-            html.Br(),
-        ]),
-    ]),
-])
+html.Br(),
+html.Br(),
+            ])
 
 
 # -----------------------------------------------------CALLBACKS-------------------------------------------------------
