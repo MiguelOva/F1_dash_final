@@ -2,6 +2,7 @@
 from dash import html
 from dash.dependencies import Input, Output, State
 from main import app
+from main import server
 import dash_bootstrap_components as dbc
 
 # --------------------------------------------------  Connect to separators
