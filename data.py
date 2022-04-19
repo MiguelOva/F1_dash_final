@@ -2,23 +2,23 @@ import numpy as np
 import pandas as pd
 
 # -----------------------------------------------------------------------------------------Loading CSV datasets
-df_circuits = pd.read_csv("https://raw.githubusercontent.com/MiguelOva/F1_datasets/main/data/circuits.csv")
+df_circuits = pd.read_csv("https://raw.githubusercontent.com/MiguelOva/F1_dash_final/main/data/circuits.csv")
 df_constructor_results = pd.read_csv(
-    'https://raw.githubusercontent.com/MiguelOva/F1_datasets/main/data/constructor_results.csv')
+    'https://raw.githubusercontent.com/MiguelOva/F1_dash_final/main/data/constructor_results.csv')
 df_constructor_standings = pd.read_csv(
-    'https://raw.githubusercontent.com/MiguelOva/F1_datasets/main/data/constructor_standings.csv')
-df_constructors = pd.read_csv('https://raw.githubusercontent.com/MiguelOva/F1_datasets/main/data/constructors.csv')
+    'https://raw.githubusercontent.com/MiguelOva/F1_dash_final/main/data/constructor_standings.csv')
+df_constructors = pd.read_csv('https://raw.githubusercontent.com/MiguelOva/F1_dash_final/main/data/constructors.csv')
 df_driver_standings = pd.read_csv(
-    'https://raw.githubusercontent.com/MiguelOva/F1_datasets/main/data/driver_standings.csv')
-df_drivers = pd.read_csv('https://raw.githubusercontent.com/MiguelOva/F1_datasets/main/data/drivers.csv')
-df_lap_times = pd.read_csv('https://raw.githubusercontent.com/MiguelOva/F1_datasets/main/data/lap_times.csv')
-df_pit_stops = pd.read_csv('https://raw.githubusercontent.com/MiguelOva/F1_datasets/main/data/pit_stops.csv')
-df_qualifying = pd.read_csv('https://raw.githubusercontent.com/MiguelOva/F1_datasets/main/data/qualifying.csv')
-df_status = pd.read_csv('https://raw.githubusercontent.com/MiguelOva/F1_datasets/main/data/status.csv')
-df_seasons = pd.read_csv('https://raw.githubusercontent.com/MiguelOva/F1_datasets/main/data/seasons.csv')
-df_sprint_results = pd.read_csv('https://raw.githubusercontent.com/MiguelOva/F1_datasets/main/data/sprint_results.csv')
-df_results = pd.read_csv('https://raw.githubusercontent.com/MiguelOva/F1_datasets/main/data/results.csv')
-df_races = pd.read_csv('https://raw.githubusercontent.com/MiguelOva/F1_datasets/main/data/races.csv')
+    'https://raw.githubusercontent.com/MiguelOva/F1_dash_final/main/data/driver_standings.csv')
+df_drivers = pd.read_csv('https://raw.githubusercontent.com/MiguelOva/F1_dash_final/main/data/drivers.csv')
+df_lap_times = pd.read_csv('https://raw.githubusercontent.com/MiguelOva/F1_dash_final/main/data/lap_times.csv')
+df_pit_stops = pd.read_csv('https://raw.githubusercontent.com/MiguelOva/F1_dash_final/main/data/pit_stops.csv')
+df_qualifying = pd.read_csv('https://raw.githubusercontent.com/MiguelOva/F1_dash_final/main/data/qualifying.csv')
+df_status = pd.read_csv('https://raw.githubusercontent.com/MiguelOva/F1_dash_final/main/data/status.csv')
+df_seasons = pd.read_csv('https://raw.githubusercontent.com/MiguelOva/F1_dash_final/main/data/seasons.csv')
+df_sprint_results = pd.read_csv('https://raw.githubusercontent.com/MiguelOva/F1_dash_final/main/data/sprint_results.csv')
+df_results = pd.read_csv('https://raw.githubusercontent.com/MiguelOva/F1_dash_final/main/data/results.csv')
+df_races = pd.read_csv('https://raw.githubusercontent.com/MiguelOva/F1_dash_final/main/data/races.csv')
 
 # ------------------------------------------------------------------- TRACKS AND DATES
 # Location Coordinates
