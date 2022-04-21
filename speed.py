@@ -64,7 +64,6 @@ drop_years = dcc.Dropdown(id='dropdown_years',
                           placeholder="Select the Championship Year",
                           options=years,
                           value=2021,
-                          multi=True
                           )
 
 # -------------------------------------------------- SUB TABS LAYOUT
@@ -138,7 +137,7 @@ cons_line_p = html.Div([
                         drop_const,
                         html.Br(),
                         html.Label('Please select Year'),
-                        # drop_years,
+                        drop_years,
                         html.Br(),
                         dcc.Loading(children=[
                             html.P(id="drivers_line",
@@ -189,7 +188,7 @@ drivers_line_p = html.Div([
                         drop_driver,
                         html.Br(),
                         html.Label('Please select Year'),
-                        # drop_years,
+                        drop_years,
                         html.Br(),
                         dcc.Loading(children=[
                             html.P(id="drivers_line",
