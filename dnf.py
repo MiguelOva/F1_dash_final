@@ -72,7 +72,6 @@ drop_years = dcc.Dropdown(id='dropdown_years',
                           placeholder="Select the Championship Year",
                           options=years,
                           value=2021,
-                          multi=True
                           )
 
 # -------------------------------------------------- SUB TABS LAYOUT
